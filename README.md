@@ -1,6 +1,9 @@
 # OrdersSystem
 System for monitoring incoming and outgoing orders 
 
+## Build Status
+[![Build status](https://ci.appveyor.com/api/projects/status/3x6llmdwi55wn87p?svg=true)](https://ci.appveyor.com/project/petyopetkov/orderssystem)
+
 ## Functionality
 Registered users can have three roles admin, boss or worker. Admin can change, add or delete everything like incoming orders, outgoing orders, repair orders, add role to user, remove role from user or delete user. Boss can add or edit orders. Worker can be assigned to an order and can only change order status.
 
