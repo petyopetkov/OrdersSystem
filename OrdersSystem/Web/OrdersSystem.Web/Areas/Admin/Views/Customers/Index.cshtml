@@ -1,0 +1,26 @@
+﻿@model IEnumerable<OrdersSystem.Web.Areas.Admin.ViewModels.Customers.CustomerViewModel>
+
+@using GridMvc.Html
+@{
+    ViewBag.Title = "All Customers";
+}
+
+<h2>All Customers</h2>
+<hr />
+
+@Html.Partial("_TempDataPartial")
+
+@Html.ActionLink("Add New Customer", "Add", null, new { @class = "btn btn-primary" })
+<br />
+<br />
+@Html.Grid(Model).Columns(columns =>
+{
+    columns.Add(x => x.Name).Titled("Name").SetWidth(110).Sortable(true).Filterable(true);
+    columns.Add(x => x.Address).Titled("Address").SetWidth(110).Sortable(true).Filterable(true);
+    columns.Add().Titled("").Encoded(false).Sanitized(false).SetWidth(30)
+        .RenderValueAs(x => Html.ActionLink("Edit", "Edit", new { x.Id }, new { @class = "btn btn-primary" }));
+    columns.Add().Titled("").Encoded(false).Sanitized(false).SetWidth(30)
+        .RenderValueAs(x => Html.ActionLink("Delete", "Delete", new { id = x.Id },
+            new { onclick = "return confirm('Do you really want to delete this customer?')", @class = "btn btn-danger" }));
+}).WithPaging(6)
+

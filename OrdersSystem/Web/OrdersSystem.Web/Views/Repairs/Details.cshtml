@@ -1,0 +1,42 @@
+﻿@model OrdersSystem.Web.ViewModels.Repairs.RepairViewModel
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+<hr />
+
+@Html.Partial("_TempDataPartial")
+
+@Html.DisplayForModel("RepairsViewModel")
+
+@Html.Partial("_EditButtonPartial")
+
+@if (this.User.IsInRole("Worker"))
+{
+    <h3>Update Status</h3>
+    using (Ajax.BeginForm("UpdateStatus", new { id = Model.Id },
+                    new AjaxOptions
+                    {
+                        HttpMethod = "POST",
+                        UpdateTargetId = "status",
+                        InsertionMode = InsertionMode.Replace
+                    }))
+    {
+        @Html.LabelFor(m => m.Status)
+        @Html.EnumDropDownListFor(m => m.Status, new { @class = "form-control" })
+
+        <input type="submit" value="Update Status" class="btn btn-sm btn-success" />
+    }
+
+}
+
+@section scripts{
+    <script>
+        function hideButton() {
+            $("#ajax-button").hide();
+        }
+    </script>
+}
+
+

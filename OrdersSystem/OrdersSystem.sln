@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{61805F96-EC04-42E6-943D-C8741FDBF839}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Models", "Models", "{07E328D3-8361-43D6-92D9-1B49C91B5244}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{D92267D2-8A97-4723-9138-729902E94DB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{61E56BAE-C171-4665-AEBC-E3EED2C32F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSystem.Web", "Web\OrdersSystem.Web\OrdersSystem.Web.csproj", "{CCA7C031-C223-46F9-813D-DCF63891077F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSystem.Services", "Services\OrdersSystem.Services\OrdersSystem.Services.csproj", "{262070EA-E799-477D-9334-25AA203726A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSystem.Models", "Models\OrdersSystem.Models\OrdersSystem.Models.csproj", "{5A8CEBE7-4F2E-49E9-9CDC-382784E63B61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSystem.Data", "Data\OrdersSystem.Data\OrdersSystem.Data.csproj", "{78B81F14-D081-4F0C-86B5-5667EDA54418}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{5C5D71C9-7BBD-4876-AE41-6F1BDBD759F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSystem.Common", "Common\OrdersSystem.Common\OrdersSystem.Common.csproj", "{651935A2-2E37-4464-9F6A-FC4BE417B1A7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{48D604D0-6571-4CF1-813E-8452346A5654}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSystem.Web.Routes.Tests", "Tests\OrdersSystem.Web.Routes.Tests\OrdersSystem.Web.Routes.Tests.csproj", "{CFFD7E3B-3596-4626-B915-62892041E25A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdersSystem.Web.Controlles.Tests", "Tests\OrdersSystem.Web.Controlles.Tests\OrdersSystem.Web.Controlles.Tests.csproj", "{8ABDB117-4E8F-4169-87CE-F22F7152BD30}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CCA7C031-C223-46F9-813D-DCF63891077F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCA7C031-C223-46F9-813D-DCF63891077F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCA7C031-C223-46F9-813D-DCF63891077F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCA7C031-C223-46F9-813D-DCF63891077F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{262070EA-E799-477D-9334-25AA203726A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{262070EA-E799-477D-9334-25AA203726A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{262070EA-E799-477D-9334-25AA203726A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{262070EA-E799-477D-9334-25AA203726A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8CEBE7-4F2E-49E9-9CDC-382784E63B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8CEBE7-4F2E-49E9-9CDC-382784E63B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8CEBE7-4F2E-49E9-9CDC-382784E63B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8CEBE7-4F2E-49E9-9CDC-382784E63B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78B81F14-D081-4F0C-86B5-5667EDA54418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78B81F14-D081-4F0C-86B5-5667EDA54418}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78B81F14-D081-4F0C-86B5-5667EDA54418}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78B81F14-D081-4F0C-86B5-5667EDA54418}.Release|Any CPU.Build.0 = Release|Any CPU
+		{651935A2-2E37-4464-9F6A-FC4BE417B1A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{651935A2-2E37-4464-9F6A-FC4BE417B1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{651935A2-2E37-4464-9F6A-FC4BE417B1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{651935A2-2E37-4464-9F6A-FC4BE417B1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFFD7E3B-3596-4626-B915-62892041E25A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFFD7E3B-3596-4626-B915-62892041E25A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFFD7E3B-3596-4626-B915-62892041E25A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFFD7E3B-3596-4626-B915-62892041E25A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8ABDB117-4E8F-4169-87CE-F22F7152BD30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8ABDB117-4E8F-4169-87CE-F22F7152BD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8ABDB117-4E8F-4169-87CE-F22F7152BD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8ABDB117-4E8F-4169-87CE-F22F7152BD30}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CCA7C031-C223-46F9-813D-DCF63891077F} = {61E56BAE-C171-4665-AEBC-E3EED2C32F96}
+		{262070EA-E799-477D-9334-25AA203726A8} = {D92267D2-8A97-4723-9138-729902E94DB5}
+		{5A8CEBE7-4F2E-49E9-9CDC-382784E63B61} = {07E328D3-8361-43D6-92D9-1B49C91B5244}
+		{78B81F14-D081-4F0C-86B5-5667EDA54418} = {61805F96-EC04-42E6-943D-C8741FDBF839}
+		{651935A2-2E37-4464-9F6A-FC4BE417B1A7} = {5C5D71C9-7BBD-4876-AE41-6F1BDBD759F8}
+		{CFFD7E3B-3596-4626-B915-62892041E25A} = {48D604D0-6571-4CF1-813E-8452346A5654}
+		{8ABDB117-4E8F-4169-87CE-F22F7152BD30} = {48D604D0-6571-4CF1-813E-8452346A5654}
+	EndGlobalSection
+EndGlobal

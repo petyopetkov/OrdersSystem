@@ -1,0 +1,55 @@
+﻿@model OrdersSystem.Web.ViewModels.InOrders.InOrderInputModel
+@{
+    ViewBag.Title = "Create New Incoming Order";
+}
+
+<h2>Create New Incoming Order</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.EditorFor(m => m.Description)
+        @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(m => m.CustomerId)
+        @Html.DropDownListFor(m => m.CustomerId, Model.Customers, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.DeviceId)
+        @Html.DropDownListFor(m => m.DeviceId, Model.Devices, new { @class = "form-control" })
+        <br />
+        @Html.EditorFor(m => m.DeviceCount)
+        @Html.ValidationMessageFor(m => m.DeviceCount, "", new { @class = "text-danger" })
+        <br />
+        @Html.EditorFor(m => m.EndDate)
+        <br />
+        <br />
+        @Html.LabelFor(m => m.WorkerId)
+        @Html.DropDownListFor(m => m.WorkerId, Model.Workers, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(m => m.Status)
+        @Html.EnumDropDownListFor(m => m.Status, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success" />
+        @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
+    </div>
+}
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            var today = new Date();
+            $('.datepicker').val("");
+            $('.datepicker').datepicker({
+                format: 'dd-MM-yyyy',
+                dateformat: 'dd-MM-yyyy',
+                startDate: new Date(today.getFullYear(), today.getMonth(), today.getDate())
+            })
+        });
+    </script>
+}
+

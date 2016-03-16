@@ -1,0 +1,47 @@
+﻿@model OrdersSystem.Web.ViewModels.Repairs.RepairViewModel
+
+<div>
+    <p>
+        <strong>Customer: </strong>@Model.Customer.Name
+    </p>
+    <p>
+        <strong>Device: </strong>@Model.Device.Name
+    </p>
+    <p>
+        <strong>Device Count: </strong>@Model.DeviceCount
+    </p>
+    <p>
+        <strong>Description: </strong>
+        <div id="description">
+            @(Model.Description.Length > 10 ? Model.Description.Substring(0, 10) + "..." : Model.Description)
+        </div>
+        @if (Model.Description.Length > 10)
+        {
+            <div>
+                @Ajax.ActionLink("See full description", "GetFullDescription", new { id = Model.Id },
+                new AjaxOptions
+                {
+                    HttpMethod = "GET",
+                    InsertionMode = InsertionMode.Replace,
+                    UpdateTargetId = "description",
+                    OnSuccess = "hideButton"
+                }, new { id = "ajax-button" })
+            </div>
+        } 
+    </p>
+    <p>
+        <strong>Status: </strong><span id="status">@Model.Status</span>
+    </p>
+    <p>
+        <strong>Ordered on: </strong>@Html.DisplayFor(m => m.StartDate)
+    </p>
+    <p>
+        <strong>End Date: </strong>@Html.DisplayFor(m => m.EndDate)
+    </p>
+    <p>
+        <strong>Ordered By: </strong>@Model.Author.UserName
+    </p>
+    <p>
+        <strong>Person In Charge: </strong>@Model.Worker.UserName
+    </p>
+</div>

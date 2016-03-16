@@ -1,0 +1,46 @@
+﻿@model OrdersSystem.Web.ViewModels.OutOrders.OutOrderInputModel
+@{
+    ViewBag.Title = "Create New Outgoing Order";
+}
+
+<h2>Create New Outgoing Order</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.EditorFor(m => m.Description)
+        @Html.ValidationMessageFor(m => m.Description, "", new { @class = "text-danger" })
+        <br />
+        @Html.LabelFor(m => m.SupplierId)
+        @Html.DropDownListFor(m => m.SupplierId, Model.Suppliers, new { @class = "form-control" })
+        <br />
+        @Html.EditorFor(m => m.EndDate)
+        <br />
+        <br />
+        @Html.LabelFor(m => m.Status)
+        @Html.EnumDropDownListFor(m => m.Status, new { @class = "form-control" })
+        <br />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success" />
+        @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
+    </div>
+}
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            var today = new Date();
+            $('.datepicker').val("");
+            $('.datepicker').datepicker({
+                format: 'dd-MM-yyyy',
+                dateformat: 'dd-MM-yyyy',
+                startDate: new Date(today.getFullYear(), today.getMonth(), today.getDate())
+            })
+        });
+    </script>
+}

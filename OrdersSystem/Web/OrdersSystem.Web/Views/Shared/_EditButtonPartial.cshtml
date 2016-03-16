@@ -1,0 +1,4 @@
+﻿@if (User.IsInRole("Boss") || User.IsInRole("Admin"))
+{
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" })
+}

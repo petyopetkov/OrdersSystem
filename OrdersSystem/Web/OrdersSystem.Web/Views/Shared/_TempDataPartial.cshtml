@@ -1,0 +1,12 @@
+﻿@if (TempData["Success"] != null)
+{
+    <div class="alert alert-dismissible alert-success notification col-md-3 pull-right">
+        <strong>@TempData["Success"]</strong>
+    </div>
+}
+@if (TempData["Warning"] != null)
+{
+    <div class="alert alert-dismissible alert-warning notification col-md-3 pull-right" role="alert">
+        <strong>@TempData["Warning"]</strong>
+    </div>
+}

@@ -1,0 +1,23 @@
+﻿@model OrdersSystem.Web.Areas.Admin.ViewModels.Suppliers.SupplierEditModel
+@{
+    ViewBag.Title = "Edit Supplier";
+}
+
+<h2>Edit Supplier</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="form-group">
+        @Html.EditorFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Update" class="btn btn-success" />
+        @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
+    </div>
+}
+

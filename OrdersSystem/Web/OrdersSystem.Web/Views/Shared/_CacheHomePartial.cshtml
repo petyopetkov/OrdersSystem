@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OrdersSystem.Web.ViewModels.InOrders.InOrderViewModel>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a href="/InOrders/Details/@item.Id">
+                            <strong>Customer: </strong>@item.Customer.Name
+                        </a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <p>
+                        <strong>Device Name: </strong>@item.Device.Name
+                    </p>
+                    <p>
+                        <strong>Device Count: </strong>@item.DeviceCount
+                    </p>
+                    <div>
+                        <strong>End Date: </strong>
+                        @Html.DisplayFor(m => item.EndDate)
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
